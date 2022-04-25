@@ -1,5 +1,5 @@
 {
-  "name": "@f11snipe/ts-cli",
+  "name": "@f11snipe/cli",
   "version": "0.1.0",
   "description": "TypeScript - Simple CLI base package",
   "main": "dist/index.js",
