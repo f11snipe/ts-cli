@@ -1,0 +1,72 @@
+{
+  "name": "@f11snipe/ts-cli",
+  "version": "0.1.0",
+  "description": "TypeScript - Simple CLI base package",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run watch",
+    "audit": "npm audit",
+    "test": "jest",
+    "tinker": "ts-node src/tinker",
+    "pack": "cat bin/pack | bash",
+    "ci:audit": "npm audit",
+    "ci:install": "npm install",
+    "ci:build": "npm run build",
+    "ci:setup": "npm run ci:install && npm run ci:lint && npm run ci:build",
+    "ci:test": "npm test",
+    "ci:lint": "npm run lint",
+    "preci": "npm run ci:setup",
+    "ci": "npm run ci:test",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "doc": "typedoc src",
+    "doc:commit": "npm run doc && git add docs && (git commit -m 'Generated Docs' || echo 'Docs unchanged')",
+    "preversion": "npm run ci && npm run doc:commit",
+    "postversion": "npm publish --access=public && git push --no-verify --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f11snipe/ts-cli.git"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">= 12"
+  },
+  "author": {
+    "name": "F11snipe",
+    "url": "https://f11snipe.cloud",
+    "organization": true
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f11snipe/ts-cli/issues"
+  },
+  "homepage": "https://github.com/f11snipe/ts-cli#readme",
+  "devDependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/command-line-usage": "^5.0.2",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.19",
+    "@types/readline-sync": "^1.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "terser": "^5.11.0",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.5.0",
+    "typedoc": "^0.22.12",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "readline-sync": "^1.4.10",
+    "ts-command-line-args": "^2.2.1"
+  }
+}
