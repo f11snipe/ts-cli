@@ -7,7 +7,7 @@ interface ICopyFilesArguments {
   // resetPermissions: boolean;
   // filter?: string;
   excludePaths?: string[];
-  help?: boolean;
+  // help?: boolean;
 }
 
 const actions: ISnipeCliActionMap = {
@@ -50,10 +50,10 @@ exampleCli.init<ICopyFilesArguments>(
     // resetPermissions: Boolean,
     // filter: { type: String, optional: true },
     excludePaths: { type: String, multiple: true, optional: true },
-    help: { type: Boolean, optional: true, alias: 'h', description: 'Prints OTHER usage guide' },
+    // help: { type: Boolean, optional: true, alias: 'h', description: 'Prints OTHER usage guide' },
   },
   {
-    helpArg: 'help',
+    // helpArg: 'help',
     // headerContentSections: [{ header: 'Extended Header', content: 'More header content' }],
     // footerContentSections: [{ header: 'Footer EXTENDED', content: `Footer content extended...` }],
   },

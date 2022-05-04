@@ -62,7 +62,7 @@ export class SnipeCli implements ISnipeCli {
         { header: 'Version', content: this.version },
       ],
       footerContentSections: Object.keys(this.actions).map((action) => ({
-        header: `Examples (${action} action)`,
+        header: this.actions[action].description || `Action: ${action}`,
         content: this.actions[action].examples?.join(`\n`) || 'None',
       })),
       ...options,
