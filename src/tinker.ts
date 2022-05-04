@@ -1,11 +1,11 @@
 import { SnipeCli, ISnipeCliActionMap } from '../src';
 
 interface ICopyFilesArguments {
-  sourcePath: string;
-  targetPath: string;
-  copyFiles: boolean;
-  resetPermissions: boolean;
-  filter?: string;
+  // sourcePath: string;
+  // targetPath: string;
+  // copyFiles: boolean;
+  // resetPermissions: boolean;
+  // filter?: string;
   excludePaths?: string[];
   help?: boolean;
 }
@@ -44,11 +44,11 @@ exampleCli.registerAction('ssm', actions.ssm);
 
 exampleCli.init<ICopyFilesArguments>(
   {
-    sourcePath: String,
-    targetPath: String,
-    copyFiles: { type: Boolean, alias: 'c', description: 'Copies files rather than moves them' },
-    resetPermissions: Boolean,
-    filter: { type: String, optional: true },
+    // sourcePath: String,
+    // targetPath: String,
+    // copyFiles: { type: Boolean, alias: 'c', description: 'Copies files rather than moves them' },
+    // resetPermissions: Boolean,
+    // filter: { type: String, optional: true },
     excludePaths: { type: String, multiple: true, optional: true },
     help: { type: Boolean, optional: true, alias: 'h', description: 'Prints OTHER usage guide' },
   },

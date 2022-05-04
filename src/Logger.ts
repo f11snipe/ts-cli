@@ -70,10 +70,6 @@ interface LogOptions {
   color?: LogTextColor;
 }
 
-type LogMag = {
-  timestamp: true;
-};
-
 type LogMethod = (...args: any[]) => void;
 
 interface ILogger {
